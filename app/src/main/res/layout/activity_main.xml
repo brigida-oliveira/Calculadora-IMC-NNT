@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/altura_em_metros"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/peso_em_quilos"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAltura" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPeso" />
+
+    <ImageView
+        android:id="@+id/imageViewIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/descricao_da_imagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalcular"
+        app:layout_constraintWidth="180dp"
+        app:srcCompat="@drawable/saudavel" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIMC">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/quadrado_azul_escuro"
+                tools:layout_editor_absoluteX="142dp"
+                tools:layout_editor_absoluteY="456dp" />
+
+            <TextView
+                android:id="@+id/textViewMagrezaGrave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="24dp"
+                android:text="Magreza grave"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/textViewIntervaloMagrezaGrave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/intervalo_magreza_grave"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/quadrado_azul"
+                tools:layout_editor_absoluteX="142dp"
+                tools:layout_editor_absoluteY="456dp" />
+
+            <TextView
+                android:id="@+id/textViewMagrezaModerada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="24dp"
+                android:text="Magreza moderada"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/textViewIntervaloMagrezaModerada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16.0 - 16.9"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/quadrado_azul_claro"
+                tools:layout_editor_absoluteX="142dp"
+                tools:layout_editor_absoluteY="456dp" />
+
+            <TextView
+                android:id="@+id/textViewMagrezaLeve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="24dp"
+                android:text="Magreza leve"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/textViewIntervaloMagrezaLeve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17.0 - 18.4"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/quadrado_verde"
+                tools:layout_editor_absoluteX="142dp"
+                tools:layout_editor_absoluteY="456dp" />
+
+            <TextView
+                android:id="@+id/textViewSaudavel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="24dp"
+                android:text="Peso saudável"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/textViewIntervaloSaudavel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18.5 - 24.9"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/quadrado_amarelo"
+                tools:layout_editor_absoluteX="142dp"
+                tools:layout_editor_absoluteY="456dp" />
+
+            <TextView
+                android:id="@+id/textViewSobrepeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="24dp"
+                android:text="Sobrepeso"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/textViewIntervaloSobrepeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25.0 - 29.9"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/quadrado_laranja"
+                tools:layout_editor_absoluteX="142dp"
+                tools:layout_editor_absoluteY="456dp" />
+
+            <TextView
+                android:id="@+id/textViewObesidadeGrauI"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="8dp"
+                android:paddingEnd="24dp"
+                android:text="Obesidade grau I"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/textViewIntervaloObesidadeGrauI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30.0 - 34.9"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/quadrado_vermelho"
+                tools:layout_editor_absoluteX="142dp"
+                tools:layout_editor_absoluteY="456dp" />
+
+            <TextView
+                android:id="@+id/textViewObesidadeGrauII"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="24dp"
+                android:text="Obesidade grau II"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/textViewIntervaloObesidadeGrauII"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35.0 - 39.9"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="293dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/quadrado_vermelho_escuro"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="456dp" />
+
+        <TextView
+            android:id="@+id/textViewObesidadeGrauIII"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="24dp"
+            android:text="Obesidade grau III"
+            tools:layout_editor_absoluteX="174dp"
+            tools:layout_editor_absoluteY="293dp" />
+
+        <TextView
+            android:id="@+id/textViewIntervaloObesidadeGrauIII"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intervalo_obesidade_grau_III"
+            tools:layout_editor_absoluteX="174dp"
+            tools:layout_editor_absoluteY="293dp" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="118dp"
+        android:text="IMC"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewIMC" />
+
+    <TextView
+        android:id="@+id/textViewIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewIMC" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

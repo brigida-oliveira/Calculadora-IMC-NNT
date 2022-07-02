@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calculadora IMC</string>
+    <string name="altura_em_metros">Altura em metros (1.60)</string>
+    <string name="peso_em_quilos">Peso em quilos (60.5)</string>
+    <string name="calcular">Calcular</string>
+    <string name="descricao_da_imagem">Imagem de um medidor</string>
+
+    <string name="intervalo_magreza_grave"><![CDATA[< 16]]></string>
+    <string name="intervalo_obesidade_grau_III"><![CDATA[> 39.9]]></string>
+</resources>

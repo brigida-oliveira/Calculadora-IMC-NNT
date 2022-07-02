@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="altura_em_metros">Altura em metros (1.60)</string>
+    <string name="peso_em_quilos">Peso em quilos (60.5)</string>
+    <string name="calcular">Calcular</string>
+    <string name="descricao_da_imagem">Imagem de um medidor</string>
+</resources>
